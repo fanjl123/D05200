@@ -1,0 +1,1900 @@
+
+// Library name: D05200_SCH_Guo
+// Cell name: DIG_CAP
+// View name: schematic
+subckt DIG_CAP NEG POS
+    NM1 (NEG POS NEG NEG) nch6 length=16.9u width=15.18u m=1 multi=1 \
+        ad=6.6792p as=6.6792p pd=16.06u ps=16.06u nf=1 sa=440n sb=440n
+    NM61 (NEG POS NEG NEG) nch6 length=14u width=20u m=2 multi=2 ad=8.8p \
+        as=8.8p pd=20.88u ps=20.88u nf=1 sa=440n sb=440n
+    NM6 (NEG POS NEG NEG) nch6 length=14u width=20u m=6 multi=6 ad=8.8p \
+        as=8.8p pd=20.88u ps=20.88u nf=1 sa=440n sb=440n
+    NM4 (NEG POS NEG NEG) nch6 length=16.9u width=22.12u m=1 multi=1 \
+        ad=9.7328p as=9.7328p pd=23u ps=23u nf=1 sa=440n sb=440n
+    NM2 (NEG POS NEG NEG) nch6 length=16.9u width=11.76u m=1 multi=1 \
+        ad=5.1744p as=5.1744p pd=12.64u ps=12.64u nf=1 sa=440n sb=440n
+    NM3 (NEG POS NEG NEG) nch6 length=16.9u width=20u m=3 multi=3 ad=8.8p \
+        as=8.8p pd=20.88u ps=20.88u nf=1 sa=440n sb=440n
+    NM5 (NEG POS NEG NEG) nch6 length=14u width=5.2u m=2 multi=2 ad=2.288p \
+        as=2.288p pd=6.08u ps=6.08u nf=1 sa=440n sb=440n
+ends DIG_CAP
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_34 MINUS PLUS
+parameters segL=100u segW=1u
+    R2 (PLUS MINUS) rppolywo length=segL width=segW
+    R1 (PLUS MINUS) rppolywo length=segL width=segW
+    R0 (PLUS MINUS) rppolywo length=segL width=segW
+ends rppolywo_pcell_34
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: INV_4_H0240_1_1_SCH_xm
+// View name: schematic
+subckt INV_4_H0240_1_1_SCH_xm IN OUT VH VL
+    PM (OUT IN VH VH VL) pch6 length=0.6u width=40u m=1 multi=1 ad=10p \
+        as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    NM (OUT IN VL VL) nch6 length=0.6u width=20u m=1 multi=1 ad=5p as=6.9p \
+        pd=2u ps=12.76u nf=4 sa=440n sb=440n
+ends INV_4_H0240_1_1_SCH_xm
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: nand3_0
+// View name: schematic
+subckt nand3_0 A1 A2 A3 VH VL ZN
+    PM0 (ZN A3 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528f \
+        as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM3 (ZN A1 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528f \
+        as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM2 (ZN A2 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528f \
+        as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NM0 (net014 A3 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM3 (ZN A1 net23 VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM2 (net23 A2 net014 VL) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends nand3_0
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: INV_3
+// View name: schematic
+subckt INV_3 IN OUT VH VL
+    PM (OUT IN VH VH VL) pch6 length=0.6u width=4.8u m=1 multi=1 ad=1.2p \
+        as=1.656p pd=2.0u ps=5.16u nf=4 sa=440n sb=440n
+    NM (OUT IN VL VL) nch6 length=0.6u width=2.4u m=1 multi=1 ad=600.0f \
+        as=828.0f pd=2.0u ps=3.96u nf=4 sa=440n sb=440n
+ends INV_3
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: INV_0_H0240_1_1_SCH_xm
+// View name: schematic
+subckt INV_0_H0240_1_1_SCH_xm IN OUT VH VL
+    PM (OUT IN VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528.0f \
+        as=528.0f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NM (OUT IN VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264.0f \
+        as=264.0f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends INV_0_H0240_1_1_SCH_xm
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_35 MINUS PLUS
+parameters segL=100u segW=1u
+    R0 (PLUS MINUS) rppolywo length=segL width=segW
+ends rppolywo_pcell_35
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: TS_BUF
+// View name: schematic
+subckt TS_BUF A AGND AVDD IE SUB Y
+    PM4 (net017 net11 net17 AVDD SUB) pch6 length=0.6u width=1.2u m=1 \
+        multi=1 ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM3 (net11 IE AVDD AVDD SUB) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM5 (Y net11 AVDD AVDD SUB) pch6 length=0.6u width=2.4u m=1 multi=1 \
+        ad=600f as=1.056p pd=1u ps=4.16u nf=2 sa=440n sb=440n
+    PM2 (net11 A net17 AVDD SUB) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM0 (net17 net14 net18 AVDD SUB) pch6 length=0.6u width=1.2u m=1 \
+        multi=1 ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM1 (net18 A AVDD AVDD SUB) pch6 length=0.6u width=1.2u m=2 multi=2 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NM4 (Y net11 AGND SUB) nch6 length=0.6u width=1.2u m=1 multi=1 ad=300f \
+        as=528f pd=1u ps=2.96u nf=2 sa=440n sb=440n
+    NM3 (net016 net11 net16 SUB) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM1 (net15 A AGND SUB) nch6 length=0.6u width=0.6u m=2 multi=2 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM0 (net16 IE net15 SUB) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM2 (net11 A net16 SUB) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    I16 (IE net14 AVDD AGND) INV_0_H0240_1_1_SCH_xm
+    R1 (AVDD net016) rppolywo_pcell_35 m=1 segL=5u segW=2u
+    R0 (AGND net017) rppolywo_pcell_35 m=1 segL=5u segW=2u
+ends TS_BUF
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_36 MINUS PLUS
+parameters segL=100u segW=1u
+    R9 (n9 MINUS) rppolywo length=segL width=segW
+    R8 (n8 n9) rppolywo length=segL width=segW
+    R7 (n7 n8) rppolywo length=segL width=segW
+    R6 (n6 n7) rppolywo length=segL width=segW
+    R5 (n5 n6) rppolywo length=segL width=segW
+    R4 (n4 n5) rppolywo length=segL width=segW
+    R3 (n3 n4) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_36
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_2 MINUS PLUS
+parameters segL=100u segW=1u
+    R1 (n1 MINUS) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_2
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_3 MINUS PLUS
+parameters segL=100u segW=1u
+    R1 (PLUS MINUS) rppolywo length=segL width=segW
+    R0 (PLUS MINUS) rppolywo length=segL width=segW
+ends rppolywo_pcell_3
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: nor3_0_H0240_1_1_SCH
+// View name: schematic
+subckt nor3_0_H0240_1_1_SCH A1 A2 A3 VH VL ZN
+    PM5 (net017 A3 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM4 (net022 A2 net017 VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM3 (ZN A1 net022 VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NM5 (ZN A3 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM4 (ZN A2 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM3 (ZN A1 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends nor3_0_H0240_1_1_SCH
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: TS_PAD
+// View name: schematic
+subckt TS_PAD AGND DI DO IE NOE OUT PD POE PU VDD VHH
+    I5 (net029 net20 VHH AGND) INV_4_H0240_1_1_SCH_xm
+    I6 (net29 net16 VHH AGND) INV_4_H0240_1_1_SCH_xm
+    NM2 (net024 PD AGND AGND) nch6 length=0.6u width=10u m=2 multi=2 \
+        ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    NM1 (net014 AGND AGND AGND) nch6 length=1u width=20u m=1 multi=1 ad=5p \
+        as=8.8p pd=1u ps=21.76u nf=2 sa=440n sb=440n
+    NM0 (net034 net16 AGND AGND) nch6 length=0.6u width=80u m=1 multi=1 \
+        ad=20p as=27.6p pd=2u ps=42.76u nf=4 sa=440n sb=440n
+    PM1 (net025 net019 VDD VDD AGND) pch6 length=0.6u width=10u m=2 \
+        multi=2 ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM0 (net034 net20 VDD VDD AGND) pch6 length=0.6u width=120u m=1 \
+        multi=1 ad=30p as=41.4p pd=2u ps=62.76u nf=4 sa=440n sb=440n
+    D0 (OUT VDD) pdio_esd area=48p pj=27.6568u m=10
+    I11 (POE DO net010 VHH AGND net028) nand3_0
+    I13 (net25 net29 VHH AGND) INV_3
+    I12 (net028 net029 VHH AGND) INV_3
+    I15 (net16 net010 VHH AGND) INV_0_H0240_1_1_SCH_xm
+    I14 (net20 net020 VHH AGND) INV_0_H0240_1_1_SCH_xm
+    I16 (NOE net031 VHH AGND) INV_0_H0240_1_1_SCH_xm
+    I9 (PU net019 VHH AGND) INV_0_H0240_1_1_SCH_xm
+    I17 (net014 AGND VHH IE AGND DI) TS_BUF
+    R2 (net034 net024) rppolywo_pcell_36 m=1 segL=10u segW=1u
+    R1 (net025 net034) rppolywo_pcell_36 m=1 segL=10u segW=1u
+    R0 (net014 net034) rppolywo_pcell_2 m=1 segL=5u segW=5u
+    R3 (OUT net034) rppolywo_pcell_3 m=1 segL=6u segW=5u
+    D1 (AGND OUT) ndio_esd area=48p pj=27.6568u m=10
+    I3 (net020 DO net031 VHH AGND net25) nor3_0_H0240_1_1_SCH
+ends TS_PAD
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_37 MINUS PLUS
+parameters segL=100u segW=1u
+    R3 (PLUS MINUS) rppolywo length=segL width=segW
+    R2 (PLUS MINUS) rppolywo length=segL width=segW
+    R1 (PLUS MINUS) rppolywo length=segL width=segW
+    R0 (PLUS MINUS) rppolywo length=segL width=segW
+ends rppolywo_pcell_37
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_5 MINUS PLUS
+parameters segL=100u segW=1u
+    R3 (n3 MINUS) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_5
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: ESDCELL_V0
+// View name: schematic
+subckt ESDCELL_V0 AGND AVDD SW SW_IN VPP
+    D2 (AGND VPP) ndio_esd area=48p pj=27.6568u m=20
+    D1 (AGND SW) ndio_esd area=48p pj=27.6568u m=10
+    D0 (SW AVDD) pdio_esd area=48p pj=27.6568u m=10
+    NM3 (AGND SW_IN AGND AGND) nch6 length=16.5u width=30.7u m=2 multi=2 \
+        ad=13.508p as=13.508p pd=31.58u ps=31.58u nf=1 sa=440n sb=440n
+    NM4 (AVDD net63 AGND AGND) nch6 length=1.2u width=50u m=30 multi=30 \
+        ad=22p as=22p pd=50.88u ps=50.88u nf=1 sa=440n sb=440n
+    PCAPVBAT (AVDD net63 AVDD AVDD AGND) pch6 length=15.2u width=38u m=2 \
+        multi=2 ad=16.72p as=16.72p pd=38.88u ps=38.88u nf=1 sa=440n \
+        sb=440n
+    R20 (SW_IN SW) rppolywo_pcell_37 m=1 segL=2.4u segW=10u
+    R27 (SW SW) rppolywo_pcell_3 m=1 segL=2.4u segW=10u
+    R0 (AGND net63) rppolywo_pcell_5 m=1 segL=62.5u segW=0.8u
+ends ESDCELL_V0
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: VDD_GND_CAP
+// View name: schematic
+subckt VDD_GND_CAP NEG POS
+    NM2 (NEG POS NEG NEG) nch6 length=20u width=15.94u m=1 multi=1 \
+        ad=7.0136p as=7.0136p pd=16.82u ps=16.82u nf=1 sa=440n sb=440n
+    NM1 (NEG POS NEG NEG) nch6 length=16.23u width=35.62u m=1 multi=1 \
+        ad=15.6728p as=15.6728p pd=36.5u ps=36.5u nf=1 sa=440n sb=440n
+    NM17 (NEG POS NEG NEG) nch6 length=15u width=5.2u m=1 multi=1 \
+        ad=2.288p as=2.288p pd=6.08u ps=6.08u nf=1 sa=440n sb=440n
+    NM15 (NEG POS NEG NEG) nch6 length=15u width=20u m=4 multi=4 ad=8.8p \
+        as=8.8p pd=20.88u ps=20.88u nf=1 sa=440n sb=440n
+    NM12 (NEG POS NEG NEG) nch6 length=19.2u width=20u m=3 multi=3 ad=8.8p \
+        as=8.8p pd=20.88u ps=20.88u nf=1 sa=440n sb=440n
+    NM13 (NEG POS NEG NEG) nch6 length=19.2u width=12u m=1 multi=1 \
+        ad=5.28p as=5.28p pd=12.88u ps=12.88u nf=1 sa=440n sb=440n
+    NM11 (NEG POS NEG NEG) nch6 length=14u width=14.5u m=1 multi=1 \
+        ad=6.38p as=6.38p pd=15.38u ps=15.38u nf=1 sa=440n sb=440n
+    NM10 (NEG POS NEG NEG) nch6 length=14u width=20u m=8 multi=8 ad=8.8p \
+        as=8.8p pd=20.88u ps=20.88u nf=1 sa=440n sb=440n
+    NM9 (NEG POS NEG NEG) nch6 length=16.9u width=22.12u m=1 multi=1 \
+        ad=9.7328p as=9.7328p pd=23u ps=23u nf=1 sa=440n sb=440n
+    NM8 (NEG POS NEG NEG) nch6 length=16.9u width=20u m=5 multi=5 ad=8.8p \
+        as=8.8p pd=20.88u ps=20.88u nf=1 sa=440n sb=440n
+ends VDD_GND_CAP
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: smit_osc_H0153_2_1LI
+// View name: schematic
+subckt smit_osc_H0153_2_1LI A VNEG VPOS Y
+    NMIN1 (net41 A net038 VNEG) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMIN0 (net038 A VNEG VNEG) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMB (net038 net41 net038 VNEG) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMOUT (Y net41 VNEG VNEG) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PMIN1 (net41 A net48 VPOS VNEG) pch6 length=1.2u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PMIN0 (net48 A VPOS VPOS VNEG) pch6 length=1.2u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PMB (net48 net41 net48 VPOS VNEG) pch6 length=0.6u width=1.2u m=1 \
+        multi=1 ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PMOUT (Y net41 VPOS VPOS VNEG) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+ends smit_osc_H0153_2_1LI
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: INV_0_H0180_1_1_SCH_H0153_2_1LI
+// View name: schematic
+subckt INV_0_H0180_1_1_SCH_H0153_2_1LI IN OUT VH VL
+    PM (OUT IN VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528.0f \
+        as=528.0f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NM (OUT IN VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264.0f \
+        as=264.0f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends INV_0_H0180_1_1_SCH_H0153_2_1LI
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: osc_comp_1
+// View name: schematic
+subckt osc_comp_1 IP OUT OUTB VH VIN VIP VL
+    I0 (net091 VL VH OUTB) smit_osc_H0153_2_1LI
+    PM0 (net47 net47 VH VH VL) pch6 length=5u width=3u m=1 multi=1 \
+        ad=1.32p as=1.32p pd=3.88u ps=3.88u nf=1 sa=440n sb=440n
+    PM1 (net091 net47 VH VH VL) pch6 length=5u width=3u m=1 multi=1 \
+        ad=1.32p as=1.32p pd=3.88u ps=3.88u nf=1 sa=440n sb=440n
+    PM2 (net094 VIN IP IP VL) pch6 length=2u width=20u m=1 multi=1 ad=5p \
+        as=8.8p pd=1u ps=21.76u nf=2 sa=440n sb=440n
+    PM3 (net0108 VIP IP IP VL) pch6 length=2u width=20u m=1 multi=1 ad=5p \
+        as=8.8p pd=1u ps=21.76u nf=2 sa=440n sb=440n
+    PM5 (IP IP IP IP VL) pch6 length=0.6u width=10u m=2 multi=2 ad=4.4p \
+        as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM4 (IP IP IP IP VL) pch6 length=0.6u width=10u m=2 multi=2 ad=4.4p \
+        as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM6\<1\> (net038\<0\> net47 VH VH VL) pch6 length=5u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM6\<0\> (net038\<1\> net47 VH VH VL) pch6 length=5u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM0 (net47 net0108 VL VL) nch6 length=5u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM1 (net0108 net0108 VL VL) nch6 length=5u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM3 (net091 net094 VL VL) nch6 length=5u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM2 (net094 net094 VL VL) nch6 length=5u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM5 (VL net091 VL VL) nch6 length=4.89u width=8.18u m=1 multi=1 \
+        ad=3.5992p as=3.5992p pd=9.06u ps=9.06u nf=1 sa=440n sb=440n
+    NM8 (net087 net094 VL VL) nch6 length=5u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM7 (net095 net0108 VL VL) nch6 length=5u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    I1 (OUTB OUT VH VL) INV_0_H0180_1_1_SCH_H0153_2_1LI
+ends osc_comp_1
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: osc_comp
+// View name: schematic
+subckt osc_comp IP OUT VH VIN VIP VL OUTB
+    I0 (net091 VL VH OUTB) smit_osc_H0153_2_1LI
+    PM0 (net47 net47 VH VH VL) pch6 length=5u width=3u m=1 multi=1 \
+        ad=1.32p as=1.32p pd=3.88u ps=3.88u nf=1 sa=440n sb=440n
+    PM1 (net091 net47 VH VH VL) pch6 length=5u width=3u m=1 multi=1 \
+        ad=1.32p as=1.32p pd=3.88u ps=3.88u nf=1 sa=440n sb=440n
+    PM2 (net094 VIN IP IP VL) pch6 length=2u width=20u m=1 multi=1 ad=5p \
+        as=8.8p pd=1u ps=21.76u nf=2 sa=440n sb=440n
+    PM3 (net0108 VIP IP IP VL) pch6 length=2u width=20u m=1 multi=1 ad=5p \
+        as=8.8p pd=1u ps=21.76u nf=2 sa=440n sb=440n
+    PM5 (IP IP IP IP VL) pch6 length=0.6u width=10u m=2 multi=2 ad=4.4p \
+        as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM4 (IP IP IP IP VL) pch6 length=0.6u width=10u m=2 multi=2 ad=4.4p \
+        as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM6\<1\> (net038\<0\> net47 VH VH VL) pch6 length=5u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM6\<0\> (net038\<1\> net47 VH VH VL) pch6 length=5u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM0 (net47 net0108 VL VL) nch6 length=5u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM1 (net0108 net0108 VL VL) nch6 length=5u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM3 (net091 net094 VL VL) nch6 length=5u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM2 (net094 net094 VL VL) nch6 length=5u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM5 (VL net091 VL VL) nch6 length=5u width=4u m=2 multi=2 ad=1.76p \
+        as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    NM8 (net087 net094 VL VL) nch6 length=5u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM7 (net095 net0108 VL VL) nch6 length=5u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    I1 (OUTB OUT VH VL) INV_0_H0180_1_1_SCH_H0153_2_1LI
+ends osc_comp
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: INV_0_H0240_1_1_SCH
+// View name: schematic
+subckt INV_0_H0240_1_1_SCH IN OUT VH VL
+    PM (OUT IN VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528.0f \
+        as=528.0f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NM (OUT IN VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264.0f \
+        as=264.0f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends INV_0_H0240_1_1_SCH
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: INV_1
+// View name: schematic
+subckt INV_1 IN OUT VH VL
+    PM (OUT IN VH VH VL) pch6 length=0.6u width=2.4u m=1 multi=1 ad=600.0f \
+        as=1.056p pd=1.0u ps=4.16u nf=2 sa=440n sb=440n
+    NM (OUT IN VL VL) nch6 length=0.6u width=1.2u m=1 multi=1 ad=300.0f \
+        as=528.0f pd=1.0u ps=2.96u nf=2 sa=440n sb=440n
+ends INV_1
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: nand2_1_H0240_1_1_SCH
+// View name: schematic
+subckt nand2_1_H0240_1_1_SCH A1 A2 VH VL ZN
+    PM3 (ZN A1 VH VH VL) pch6 length=0.6u width=10u m=1 multi=1 ad=4.4p \
+        as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM2 (ZN A2 VH VH VL) pch6 length=0.6u width=10u m=1 multi=1 ad=4.4p \
+        as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    NM3 (ZN A1 net23 VL) nch6 length=0.6u width=5u m=1 multi=1 ad=2.2p \
+        as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM2 (net23 A2 VL VL) nch6 length=0.6u width=5u m=1 multi=1 ad=2.2p \
+        as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+ends nand2_1_H0240_1_1_SCH
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: nor2_1_H0240_1_1_SCH
+// View name: schematic
+subckt nor2_1_H0240_1_1_SCH A1 A2 VH VL ZN
+    PM3 (ZN A1 net17 VH VL) pch6 length=0.6u width=10u m=1 multi=1 ad=4.4p \
+        as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM2 (net17 A2 VH VH VL) pch6 length=0.6u width=10u m=1 multi=1 ad=4.4p \
+        as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    NM3 (ZN A2 VL VL) nch6 length=0.6u width=5u m=1 multi=1 ad=2.2p \
+        as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM2 (ZN A1 VL VL) nch6 length=0.6u width=5u m=1 multi=1 ad=2.2p \
+        as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+ends nor2_1_H0240_1_1_SCH
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: INV_4_H0240_1_1_SCH
+// View name: schematic
+subckt INV_4_H0240_1_1_SCH IN OUT VH VL
+    PM (OUT IN VH VH VL) pch6 length=0.6u width=40u m=1 multi=1 ad=10p \
+        as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    NM (OUT IN VL VL) nch6 length=0.6u width=20u m=1 multi=1 ad=5p as=6.9p \
+        pd=2u ps=12.76u nf=4 sa=440n sb=440n
+ends INV_4_H0240_1_1_SCH
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: DFCTNB_ANA
+// View name: schematic
+subckt DFCTNB_ANA VH VL cdn cp d q qn
+    PM12 (CKN cp VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528f \
+        as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM13 (CKP CKN VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM10 (net77 qn VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM7 (net89 cdn VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM11 (net166 CKP net77 VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM2 (net170 CKP net132 VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM6 (q qn VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528f \
+        as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM4 (qn net166 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM8 (net89 CKN net170 VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM9 (net89 net174 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM3 (net166 CKN net174 VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM5 (qn cdn VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528f \
+        as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM1 (net174 net170 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM0 (net132 d VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NM8 (net182 net174 net186 VL) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM5 (net154 net166 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM7 (net162 qn VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM13 (CKP CKN VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM12 (CKN cp VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM6 (net166 CKN net162 VL) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM4 (q qn VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM10 (net166 CKP net174 VL) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM3 (net186 cdn VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM1 (net178 d VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM11 (net182 CKP net170 VL) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM0 (net170 CKN net178 VL) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM2 (net174 net170 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM9 (qn cdn net154 VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends DFCTNB_ANA
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: OSC
+// View name: schematic
+subckt OSC AGND IB_CLK IB_SW IOSC1 IOSC2 REF_CLK RESET SMOKE_CLK SW \
+        SW_TEST SW_TESTB VDDIN1 VREF_OSC TEST_CLK
+    I54 (IB_CLK net181 net112 VDDIN1 IOSC1 VREF_OSC AGND) osc_comp_1
+    I53 (IB_SW net174 VDDIN1 IOSC2 VREF_OSC AGND net178) osc_comp
+    NM12 (net055 net70 AGND AGND) nch6 length=0.6u width=4u m=5 multi=5 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    NM15 (AGND IOSC1 AGND AGND) nch6 length=19.99u width=19.44u m=1 \
+        multi=1 ad=8.5536p as=8.5536p pd=20.32u ps=20.32u nf=1 sa=440n \
+        sb=440n
+    NM9 (AGND IOSC1 AGND AGND) nch6 length=19.99u width=34.42u m=1 multi=1 \
+        ad=15.1448p as=15.1448p pd=35.3u ps=35.3u nf=1 sa=440n sb=440n
+    NM14 (AGND IOSC1 AGND AGND) nch6 length=13u width=13.97u m=1 multi=1 \
+        ad=6.1468p as=6.1468p pd=14.85u ps=14.85u nf=1 sa=440n sb=440n
+    NM2 (AGND IOSC1 AGND AGND) nch6 length=20u width=35.14u m=2 multi=2 \
+        ad=15.4616p as=15.4616p pd=36.02u ps=36.02u nf=1 sa=440n sb=440n
+    NM7 (AGND IOSC1 AGND AGND) nch6 length=15.6u width=38.31u m=1 multi=1 \
+        ad=16.8564p as=16.8564p pd=39.19u ps=39.19u nf=1 sa=440n sb=440n
+    NM1 (AGND IOSC1 AGND AGND) nch6 length=3.4u width=45.175u m=1 multi=1 \
+        ad=19.877p as=19.877p pd=46.055u ps=46.055u nf=1 sa=440n sb=440n
+    NM8 (AGND IOSC1 AGND AGND) nch6 length=3.92u width=8u m=1 multi=1 \
+        ad=3.52p as=3.52p pd=8.88u ps=8.88u nf=1 sa=440n sb=440n
+    NM0 (AGND IOSC1 AGND AGND) nch6 length=2.12u width=13.16u m=1 multi=1 \
+        ad=5.7904p as=5.7904p pd=14.04u ps=14.04u nf=1 sa=440n sb=440n
+    NM11 (AGND IOSC1 AGND AGND) nch6 length=20u width=52u m=4 multi=4 \
+        ad=22.88p as=22.88p pd=52.88u ps=52.88u nf=1 sa=440n sb=440n
+    NM5 (IOSC1 net70 AGND AGND) nch6 length=0.6u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    NM6 (IOSC1 RESET AGND AGND) nch6 length=0.6u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    NM3a (AGND IOSC1 AGND AGND) nch6 length=17.2u width=22.4u m=1 multi=1 \
+        ad=9.856p as=9.856p pd=23.28u ps=23.28u nf=1 sa=440n sb=440n
+    NM17 (net83 net178 net79 AGND) nch6 length=5u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM16 (net91 net178 net83 AGND) nch6 length=5u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM30 (AGND net178 AGND AGND) nch6 length=5u width=0.6u m=2 multi=2 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM13 (net107 net178 net91 AGND) nch6 length=5u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM18 (net79 net178 AGND AGND) nch6 length=5u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM21 (AGND IOSC1 AGND AGND) nch6 length=3.96u width=13u m=1 multi=1 \
+        ad=5.72p as=5.72p pd=13.88u ps=13.88u nf=1 sa=440n sb=440n
+    NM10 (AGND IOSC1 AGND AGND) nch6 length=13u width=34.42u m=1 multi=1 \
+        ad=15.1448p as=15.1448p pd=35.3u ps=35.3u nf=1 sa=440n sb=440n
+    NM4 (SW net171 AGND AGND) nch6 length=1u width=30u m=1 multi=1 ad=9.4p \
+        as=9.4p pd=11.88u ps=11.88u nf=3 sa=440n sb=440n
+    NM3 (SW net114 AGND AGND) nch6 length=1u width=30u m=1 multi=1 ad=9.4p \
+        as=9.4p pd=11.88u ps=11.88u nf=3 sa=440n sb=440n
+    R9 (net111 net107) rppolywo_pcell_36 m=1 segL=5u segW=1u
+    R7 (AGND AGND) rppolywo_pcell_35 m=1 segL=3u segW=1u
+    R8 (SW net111) rppolywo_pcell_35 m=1 segL=5u segW=1u
+    R1 (SW IOSC2) rppolywo_pcell_35 m=1 segL=5u segW=1u
+    R5 (AGND AGND) rppolywo_pcell_35 m=1 segL=5u segW=1u
+    R6 (AGND AGND) rppolywo_pcell_35 m=1 segL=5u segW=1u
+    I47 (net171 net118 VDDIN1 AGND) INV_0_H0240_1_1_SCH
+    I50 (net113 net114 VDDIN1 AGND) INV_0_H0240_1_1_SCH
+    I51 (net70 net122 VDDIN1 AGND) INV_0_H0240_1_1_SCH
+    I59 (AGND net126 VDDIN1 AGND) INV_0_H0240_1_1_SCH
+    I45 (RESET net130 VDDIN1 AGND) INV_0_H0240_1_1_SCH
+    I56 (net165 net134 VDDIN1 AGND) INV_0_H0240_1_1_SCH
+    I46 (net118 SMOKE_CLK VDDIN1 AGND) INV_1
+    I52 (net122 REF_CLK VDDIN1 AGND) INV_1
+    I49 (RESET SW_TEST VDDIN1 AGND net113) nand2_1_H0240_1_1_SCH
+    I55 (RESET net181 VDDIN1 AGND net70) nor2_1_H0240_1_1_SCH
+    I57 (net134 TEST_CLK VDDIN1 AGND) INV_4_H0240_1_1_SCH
+    I48 (RESET net174 SW_TESTB VDDIN1 AGND net171) nor3_0_H0240_1_1_SCH
+    I58 (VDDIN1 AGND net130 REF_CLK net160 net165 net160) DFCTNB_ANA
+ends OSC
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: DRVBLK
+// View name: schematic
+subckt DRVBLK AGND DI DO IE NOE OUT PD POE PU VDD VHH
+    I5 (net029 net20 VHH AGND) INV_4_H0240_1_1_SCH_xm
+    I6 (net29 net16 VHH AGND) INV_4_H0240_1_1_SCH_xm
+    NM2 (net024 PD AGND AGND) nch6 length=0.6u width=10u m=2 multi=2 \
+        ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    NM1 (net014 AGND AGND AGND) nch6 length=1u width=20u m=1 multi=1 ad=5p \
+        as=8.8p pd=1u ps=21.76u nf=2 sa=440n sb=440n
+    NM0 (OUT net16 AGND AGND) nch6 length=0.6u width=900u m=1 multi=1 \
+        ad=225p as=242.1p pd=10u ps=100.76u nf=20 sa=440n sb=440n
+    PM1 (net025 net019 VDD VDD AGND) pch6 length=0.6u width=10u m=2 \
+        multi=2 ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM0 (OUT net20 VDD VDD AGND) pch6 length=0.6u width=900u m=1 multi=1 \
+        ad=225p as=242.1p pd=10u ps=100.76u nf=20 sa=440n sb=440n
+    I11 (POE DO net010 VHH AGND net028) nand3_0
+    I13 (net25 net29 VHH AGND) INV_3
+    I12 (net028 net029 VHH AGND) INV_3
+    I15 (net16 net010 VHH AGND) INV_0_H0240_1_1_SCH_xm
+    I14 (net20 net020 VHH AGND) INV_0_H0240_1_1_SCH_xm
+    I16 (NOE net031 VHH AGND) INV_0_H0240_1_1_SCH_xm
+    I9 (PU net019 VHH AGND) INV_0_H0240_1_1_SCH_xm
+    I17 (net014 AGND VHH IE AGND DI) TS_BUF
+    R2 (OUT net024) rppolywo_pcell_36 m=1 segL=10u segW=1u
+    R1 (net025 OUT) rppolywo_pcell_36 m=1 segL=10u segW=1u
+    R0 (net014 OUT) rppolywo_pcell_2 m=1 segL=5u segW=5u
+    I3 (net020 DO net031 VHH AGND net25) nor3_0_H0240_1_1_SCH
+ends DRVBLK
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: smit_rst
+// View name: schematic
+subckt smit_rst A VNEG VPOS Y
+    PMIN1 (net64 A net058 VPOS VNEG) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PMIN0 (net058 A VPOS VPOS VNEG) pch6 length=10u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PMB (VNEG net64 net058 VPOS VNEG) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PMOUT (Y net64 VPOS VPOS VNEG) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NMOUT (Y net64 VNEG VNEG) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMIN0 (net069 A VNEG VNEG) nch6 length=10u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM10 (VPOS net64 net061 VNEG) nch6 length=10u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM9 (net057 A net069 VNEG) nch6 length=10u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM8 (net065 A net057 VNEG) nch6 length=10u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMB (net061 net64 net057 VNEG) nch6 length=10u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMIN1 (net64 A net065 VNEG) nch6 length=10u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends smit_rst
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: nor3_0_H0240_1_1_SCH_xm
+// View name: schematic
+subckt nor3_0_H0240_1_1_SCH_xm A1 A2 A3 VH VL ZN
+    PM5 (net017 A3 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM4 (net022 A2 net017 VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM3 (ZN A1 net022 VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528f as=528f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NM5 (ZN A3 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM4 (ZN A2 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM3 (ZN A1 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264f \
+        as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends nor3_0_H0240_1_1_SCH_xm
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: nand2_0
+// View name: schematic
+subckt nand2_0 A1 A2 VH VL ZN
+    PM3 (ZN A1 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528.0f \
+        as=528.0f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PM2 (ZN A2 VH VH VL) pch6 length=0.6u width=1.2u m=1 multi=1 ad=528.0f \
+        as=528.0f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NM3 (ZN A1 net23 VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264.0f \
+        as=264.0f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM2 (net23 A2 VL VL) nch6 length=0.6u width=0.6u m=1 multi=1 ad=264.0f \
+        as=264.0f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends nand2_0
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: RESET
+// View name: schematic
+subckt RESET AGND BIAS_OK RESET TM_RST VDDIN1
+    R0 (AGND net33) rppolywo_pcell_35 m=1 segL=5u segW=1u
+    I39 (net30 AGND VDDIN1 net23) smit_rst
+    I42 (net022 net014 VDDIN1 AGND) INV_0_H0240_1_1_SCH_xm
+    I41 (net11 RESET VDDIN1 AGND) INV_0_H0240_1_1_SCH_xm
+    I38 (net23 net17 VDDIN1 AGND) INV_0_H0240_1_1_SCH_xm
+    NM0 (AGND net30 AGND AGND) nch6 length=20u width=40u m=1 multi=1 \
+        ad=17.6p as=17.6p pd=40.88u ps=40.88u nf=1 sa=440n sb=440n
+    NM13 (net30 net014 AGND AGND) nch6 length=0.6u width=10u m=1 multi=1 \
+        ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    NM14 (AGND net30 AGND AGND) nch6 length=20u width=28.1u m=1 multi=1 \
+        ad=12.364p as=12.364p pd=28.98u ps=28.98u nf=1 sa=440n sb=440n
+    NM15 (AGND net30 AGND AGND) nch6 length=12.5u width=19.1u m=1 multi=1 \
+        ad=8.404p as=8.404p pd=19.98u ps=19.98u nf=1 sa=440n sb=440n
+    PM0 (net52 net33 net67 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM1 (net67 net33 VDDIN1 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM2 (net42 net33 net57 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM3 (net57 net33 net52 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM4 (net094 net33 net47 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM5 (net47 net33 net42 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM14 (net080 net33 net073 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM16 (net070 net33 net063 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM15 (net30 net33 net080 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM17 (net073 net33 net070 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM18 (net060 net33 net094 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM19 (net063 net33 net060 VDDIN1 AGND) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM20 (VDDIN1 VDDIN1 VDDIN1 VDDIN1 AGND) pch6 length=0.6u width=1u m=1 \
+        multi=1 ad=440f as=440f pd=1.88u ps=1.88u nf=1 sa=440n sb=440n
+    I40 (net17 net17 net014 VDDIN1 AGND net11) nor3_0_H0240_1_1_SCH_xm
+    I43 (BIAS_OK TM_RST VDDIN1 AGND net022) nand2_0
+ends RESET
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_38 MINUS PLUS
+parameters segL=100u segW=1u
+    R23 (n23 MINUS) rppolywo length=segL width=segW
+    R22 (n22 n23) rppolywo length=segL width=segW
+    R21 (n21 n22) rppolywo length=segL width=segW
+    R20 (n20 n21) rppolywo length=segL width=segW
+    R19 (n19 n20) rppolywo length=segL width=segW
+    R18 (n18 n19) rppolywo length=segL width=segW
+    R17 (n17 n18) rppolywo length=segL width=segW
+    R16 (n16 n17) rppolywo length=segL width=segW
+    R15 (n15 n16) rppolywo length=segL width=segW
+    R14 (n14 n15) rppolywo length=segL width=segW
+    R13 (n13 n14) rppolywo length=segL width=segW
+    R12 (n12 n13) rppolywo length=segL width=segW
+    R11 (n11 n12) rppolywo length=segL width=segW
+    R10 (n10 n11) rppolywo length=segL width=segW
+    R9 (n9 n10) rppolywo length=segL width=segW
+    R8 (n8 n9) rppolywo length=segL width=segW
+    R7 (n7 n8) rppolywo length=segL width=segW
+    R6 (n6 n7) rppolywo length=segL width=segW
+    R5 (n5 n6) rppolywo length=segL width=segW
+    R4 (n4 n5) rppolywo length=segL width=segW
+    R3 (n3 n4) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_38
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_39 MINUS PLUS
+parameters segL=100u segW=1u
+    R13 (n13 MINUS) rppolywo length=segL width=segW
+    R12 (n12 n13) rppolywo length=segL width=segW
+    R11 (n11 n12) rppolywo length=segL width=segW
+    R10 (n10 n11) rppolywo length=segL width=segW
+    R9 (n9 n10) rppolywo length=segL width=segW
+    R8 (n8 n9) rppolywo length=segL width=segW
+    R7 (n7 n8) rppolywo length=segL width=segW
+    R6 (n6 n7) rppolywo length=segL width=segW
+    R5 (n5 n6) rppolywo length=segL width=segW
+    R4 (n4 n5) rppolywo length=segL width=segW
+    R3 (n3 n4) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_39
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_40 MINUS PLUS
+parameters segL=100u segW=1u
+    R6 (n6 MINUS) rppolywo length=segL width=segW
+    R5 (n5 n6) rppolywo length=segL width=segW
+    R4 (n4 n5) rppolywo length=segL width=segW
+    R3 (n3 n4) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_40
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_41 MINUS PLUS
+parameters segL=100u segW=1u
+    R2 (n2 MINUS) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_41
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: smit
+// View name: schematic
+subckt smit A VNEG VPOS Y
+    PMIN1 (net64 A net058 VPOS VNEG) pch6 length=0.6u width=1.2u m=1 \
+        multi=1 ad=528.0f as=528.0f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PMIN0 (net058 A VPOS VPOS VNEG) pch6 length=0.6u width=1.2u m=1 \
+        multi=1 ad=528.0f as=528.0f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PMB (VNEG net64 net058 VPOS VNEG) pch6 length=0.6u width=1.2u m=1 \
+        multi=1 ad=528.0f as=528.0f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    PMOUT (Y net64 VPOS VPOS VNEG) pch6 length=0.6u width=1.2u m=1 multi=1 \
+        ad=528.0f as=528.0f pd=2.08u ps=2.08u nf=1 sa=440n sb=440n
+    NMOUT (Y net64 VNEG VNEG) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264.0f as=264.0f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMIN0 (net065 A VNEG VNEG) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264.0f as=264.0f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMB (VPOS net64 net065 VNEG) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264.0f as=264.0f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMIN1 (net64 A net065 VNEG) nch6 length=0.6u width=0.6u m=1 multi=1 \
+        ad=264.0f as=264.0f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends smit
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: BIAS
+// View name: schematic
+subckt BIAS AGND BIAS_OK DTIB0 DTIB1 DTIB2 DTIB3 IB_CLK IB_DLY IB_OSC1 \
+        IB_OSC2 IB_OTP IB_SW P_TR TH TRIMOUT VH VREF_OSC
+    I15 (net668 BIAS_OK VH AGND) INV_0_H0240_1_1_SCH_xm
+    Q0 (AGND AGND VREF_OSC) spnp6_2x4 m=1 multi=1
+    PM36 (net0524 net668 VH VH AGND) pch6 length=0.6u width=5u m=1 multi=1 \
+        ad=1.25p as=2.2p pd=1u ps=6.76u nf=2 sa=440n sb=440n
+    PM67 (net0598 net525 VH VH AGND) pch6 length=3u width=6u m=1 multi=1 \
+        ad=2.64p as=2.64p pd=6.88u ps=6.88u nf=1 sa=440n sb=440n
+    PM68 (net0361 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM35 (net0598 net525 VH VH AGND) pch6 length=3u width=6u m=1 multi=1 \
+        ad=2.64p as=2.64p pd=6.88u ps=6.88u nf=1 sa=440n sb=440n
+    PM10 (net296 net0417 net531 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM0 (net456 net0417 VH VH AGND) pch6 length=20u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM32 (net341 net0417 net351 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM23 (net092 net0417 net246 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM40 (net471 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM16 (net486 net0417 net261 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM14 (net321 net0417 net271 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM37 (net481 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM13 (net271 net0417 net291 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM12 (net301 net0417 net296 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM11 (net351 net0417 net301 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM9 (net531 net0417 net321 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM31 (net0524 net0417 net341 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM30 (net401 net0417 net346 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM29 (net346 net0417 net0524 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM5 (net476 net0417 net356 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM4 (net366 net0417 net361 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM3 (net0518 net0417 net366 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM28 (net391 net0417 net371 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM8 (net451 net0417 net0518 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM27 (net0293 net0417 net391 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM26 (net371 net0417 net396 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM25 (net396 net0417 net401 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM24 (net246 net0417 net406 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM22 (net0113 net0417 net525 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM21 (net525 net0417 net092 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM20 (net436 net0417 net431 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM19 (net406 net0417 net436 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM18 (net431 net0417 net441 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM17 (net441 net0417 net0293 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM7 (net356 net0417 net451 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM2 (net361 net0417 net456 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM39 (net675 net0204 net471 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM6 (net261 net0417 net476 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM38 (net335 net0204 net481 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM15 (net291 net0417 net486 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM45\<4\> (net0288\<0\> net335 VH VH AGND) pch6 length=10u width=4u \
+        m=1 multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n \
+        sb=440n
+    PM45\<3\> (net0288\<1\> net335 VH VH AGND) pch6 length=10u width=4u \
+        m=1 multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n \
+        sb=440n
+    PM45\<2\> (net0288\<2\> net335 VH VH AGND) pch6 length=10u width=4u \
+        m=1 multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n \
+        sb=440n
+    PM45\<1\> (net0288\<3\> net335 VH VH AGND) pch6 length=10u width=4u \
+        m=1 multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n \
+        sb=440n
+    PM45\<0\> (net0288\<4\> net335 VH VH AGND) pch6 length=10u width=4u \
+        m=1 multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n \
+        sb=440n
+    PM34 (net511 net0417 net0113 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM33 (net609 net0417 net511 VH AGND) pch6 length=20u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM71\<4\> (net0209\<0\> net0204 VH VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM71\<3\> (net0209\<1\> net0204 VH VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM71\<2\> (net0209\<2\> net0204 VH VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM71\<1\> (net0209\<3\> net0204 VH VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM71\<0\> (net0209\<4\> net0204 VH VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM63 (net0300 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM58 (net0290 net335 net0299 VH AGND) pch6 length=10u width=4u m=1 \
+        multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM64 (IB_SW net0204 net0300 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM60 (IB_OTP net0204 net0295 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM50 (IB_DLY net0204 net0290 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM52 (VH net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM59 (net0295 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM51 (IB_OSC2 net0204 net0275 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM49 (net0299 net335 net0361 VH AGND) pch6 length=10u width=4u m=1 \
+        multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM57 (IB_OSC1 net0204 net0265 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM56 (net0265 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM66 (net0245 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM65 (IB_CLK net0204 net0245 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM55 (VH net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM48 (net0210 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM47 (VH net0204 net0210 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM54 (TH net0204 net0205 VH AGND) pch6 length=0.6u width=2.5u m=1 \
+        multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    PM53 (VH net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM42 (net0205 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM1 (net0275 net335 VH VH AGND) pch6 length=10u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM44\<4\> (VH net0204 net0288\<0\> VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM44\<3\> (VH net0204 net0288\<1\> VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM44\<2\> (VH net0204 net0288\<2\> VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM44\<1\> (VH net0204 net0288\<3\> VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM44\<0\> (VH net0204 net0288\<4\> VH AGND) pch6 length=0.6u \
+        width=2.5u m=1 multi=1 ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 \
+        sa=440n sb=440n
+    PM70\<1\> (net0208\<0\> net0204 net0213\<0\> VH AGND) pch6 length=0.6u \
+        width=0.6u m=1 multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 \
+        sa=440n sb=440n
+    PM70\<0\> (net0208\<1\> net0204 net0213\<1\> VH AGND) pch6 length=0.6u \
+        width=0.6u m=1 multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 \
+        sa=440n sb=440n
+    PM69\<1\> (net0213\<0\> net335 VH VH AGND) pch6 length=10u width=0.6u \
+        m=1 multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM69\<0\> (net0213\<1\> net335 VH VH AGND) pch6 length=10u width=0.6u \
+        m=1 multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM2 (AGND net609 AGND AGND) nch6 length=4u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    NM1 (net0739 net609 AGND AGND) nch6 length=4u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    NM4 (net0598 net675 net0739 AGND) nch6 length=4u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    NM0 (net609 net609 AGND AGND) nch6 length=4u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    NM10 (net0204 net609 net0693 AGND) nch6 length=4u width=16u m=1 \
+        multi=1 ad=4p as=5.52p pd=2u ps=10.76u nf=4 sa=440n sb=440n
+    NM9 (net675 net675 VREF_OSC AGND) nch6 length=8u width=8u m=1 multi=1 \
+        ad=2p as=3.52p pd=1u ps=9.76u nf=2 sa=440n sb=440n
+    NMTF1_2 (net0770 DTIB0 net0543 AGND) nch6 length=0.6u width=10u m=1 \
+        multi=1 ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    NM8 (net0204 net675 net0693 AGND) nch6 length=8u width=8u m=1 multi=1 \
+        ad=2p as=3.52p pd=1u ps=9.76u nf=2 sa=440n sb=440n
+    NMTF2_3 (net0543 DTIB1 net0545 AGND) nch6 length=0.6u width=10u m=1 \
+        multi=1 ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    NM7 (net0204 VH net0204 AGND) nch6 length=10u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM6 (net335 VH net0204 AGND) nch6 length=10u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NMTF3_4 (net0545 DTIB2 net0547 AGND) nch6 length=0.6u width=10u m=1 \
+        multi=1 ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    NMTF4_G (net0547 DTIB3 net0774 AGND) nch6 length=0.6u width=10u m=1 \
+        multi=1 ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    NM16 (AGND VREF_OSC AGND AGND) nch6 length=16.98u width=46.41u m=1 \
+        multi=1 ad=20.4204p as=20.4204p pd=47.29u ps=47.29u nf=1 sa=440n \
+        sb=440n
+    NM14\<1\> (net0554\<0\> net609 AGND AGND) nch6 length=4u width=0.6u \
+        m=1 multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM14\<0\> (net0554\<1\> net609 AGND AGND) nch6 length=4u width=0.6u \
+        m=1 multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM17 (AGND VREF_OSC AGND AGND) nch6 length=5.48u width=15u m=1 multi=1 \
+        ad=6.6p as=6.6p pd=15.88u ps=15.88u nf=1 sa=440n sb=440n
+    NM13\<1\> (net0558\<0\> net675 AGND AGND) nch6 length=0.6u width=4u \
+        m=1 multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n \
+        sb=440n
+    NM13\<0\> (net0558\<1\> net675 AGND AGND) nch6 length=0.6u width=4u \
+        m=1 multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n \
+        sb=440n
+    NM15 (AGND net0598 AGND AGND) nch6 length=20u width=8.1u m=1 multi=1 \
+        ad=3.564p as=3.564p pd=8.98u ps=8.98u nf=1 sa=440n sb=440n
+    R1 (TRIMOUT P_TR) rppolywo_pcell_2 m=1 segL=66u segW=0.6u
+    R13 (AGND net640) rppolywo_pcell_35 m=1 segL=66u segW=0.6u
+    R0 (net640 net0417) rppolywo_pcell_35 m=1 segL=66u segW=0.6u
+    R12 (net0774 net0547) rppolywo_pcell_38 m=1 segL=66u segW=0.6u
+    R11 (net0547 net0545) rppolywo_pcell_39 m=1 segL=66u segW=0.6u
+    R10 (net0545 net0543) rppolywo_pcell_40 m=1 segL=66u segW=0.6u
+    R8 (net0770 net0693) rppolywo_pcell_38 m=1 segL=66u segW=0.6u
+    R9 (net0543 net0770) rppolywo_pcell_41 m=1 segL=66u segW=0.6u
+    R3 (AGND net0774) rppolywo_pcell_38 m=1 segL=66u segW=0.6u
+    I16 (net0598 AGND VH net668) smit
+ends BIAS
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: Other_CAP
+// View name: schematic
+subckt Other_CAP NEG POS
+    NM4 (NEG POS NEG NEG) nch6 length=5.24u width=20u m=5 multi=5 ad=8.8p \
+        as=8.8p pd=20.88u ps=20.88u nf=1 sa=440n sb=440n
+    NM6 (NEG POS NEG NEG) nch6 length=20u width=20u m=7 multi=7 ad=8.8p \
+        as=8.8p pd=20.88u ps=20.88u nf=1 sa=440n sb=440n
+    NM7 (NEG POS NEG NEG) nch6 length=20u width=17u m=1 multi=1 ad=7.48p \
+        as=7.48p pd=17.88u ps=17.88u nf=1 sa=440n sb=440n
+    NM5 (NEG POS NEG NEG) nch6 length=5.24u width=18.5u m=1 multi=1 \
+        ad=8.14p as=8.14p pd=19.38u ps=19.38u nf=1 sa=440n sb=440n
+ends Other_CAP
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywi
+// View name: schematic
+subckt rppolywi_pcell_42 MINUS PLUS
+parameters segL=20u segW=0.18u
+    R1 (n1 MINUS) rppolywi length=segL width=segW
+    R0 (PLUS n1) rppolywi length=segL width=segW
+ends rppolywi_pcell_42
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: invxd2
+// View name: schematic
+subckt invxd2 A VNEG VPOS Y
+    NM8 (Y A VNEG VNEG) nch6 length=0.6u width=4u m=1 multi=1 ad=1p \
+        as=1.76p pd=1u ps=5.76u nf=2 sa=440n sb=440n
+    PM6 (Y A VPOS VPOS VNEG) pch6 length=0.6u width=8u m=1 multi=1 ad=2p \
+        as=3.52p pd=1u ps=9.76u nf=2 sa=440n sb=440n
+ends invxd2
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: nand2d2
+// View name: schematic
+subckt nand2d2 Y A B VPOS VNEG
+    NM0 (Y A net19 VNEG) nch6 length=0.6u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM8 (net19 B VNEG VNEG) nch6 length=0.6u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM0 (Y B VPOS VPOS VNEG) pch6 length=0.6u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM6 (Y A VPOS VPOS VNEG) pch6 length=0.6u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+ends nand2d2
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: invxd1
+// View name: schematic
+subckt invxd1 A VNEG VPOS Y
+    NM8 (Y A VNEG VNEG) nch6 length=0.6u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM6 (Y A VPOS VPOS VNEG) pch6 length=0.6u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+ends invxd1
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: dffrn
+// View name: schematic
+subckt dffrn CLK D Q QN RN VNEG VPOS
+    I5 (SWP CLK RN VPOS VNEG) nand2d2
+    I7 (Q RN net054 VPOS VNEG) nand2d2
+    NM0 (net054 SWN net063 VNEG) nch6 length=0.6u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM6 (net064 net052 VNEG VNEG) nch6 length=0.6u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM2 (net066 D VNEG VNEG) nch6 length=0.6u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM3 (net050 SWP net066 VNEG) nch6 length=0.6u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM5 (net054 SWP net060 VNEG) nch6 length=0.6u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM4 (net060 Q VNEG VNEG) nch6 length=0.6u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM1 (net063 net052 VNEG VNEG) nch6 length=0.6u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM7 (net050 SWN net064 VNEG) nch6 length=0.6u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    I6 (SWP VNEG VPOS SWN) invxd1
+    I8 (Q VNEG VPOS QN) invxd1
+    I9 (net050 VNEG VPOS net052) invxd1
+    PM7 (net065 net052 VPOS VPOS VNEG) pch6 length=0.6u width=4u m=1 \
+        multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM3 (net067 D VPOS VPOS VNEG) pch6 length=0.6u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM4 (net054 SWN net061 VPOS VNEG) pch6 length=0.6u width=4u m=1 \
+        multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM0 (net062 net052 VPOS VPOS VNEG) pch6 length=0.6u width=4u m=1 \
+        multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM2 (net050 SWN net067 VPOS VNEG) pch6 length=0.6u width=4u m=1 \
+        multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM1 (net054 SWP net062 VPOS VNEG) pch6 length=0.6u width=4u m=1 \
+        multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM6 (net050 SWP net065 VPOS VNEG) pch6 length=0.6u width=4u m=1 \
+        multi=1 ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM5 (net061 Q VPOS VPOS VNEG) pch6 length=0.6u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+ends dffrn
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_3 MINUS PLUS
+parameters segL=100u segW=1u
+    R1 (PLUS MINUS) rppolywo length=segL width=segW
+    R0 (PLUS MINUS) rppolywo length=segL width=segW
+ends rppolywo_pcell_3
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_10 MINUS PLUS
+parameters segL=100u segW=1u
+    R0 (PLUS MINUS) rppolywo length=segL width=segW
+ends rppolywo_pcell_10
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_2 MINUS PLUS
+parameters segL=100u segW=1u
+    R1 (n1 MINUS) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_2
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_5 MINUS PLUS
+parameters segL=100u segW=1u
+    R3 (n3 MINUS) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_5
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_11 MINUS PLUS
+parameters segL=100u segW=1u
+    R7 (n7 MINUS) rppolywo length=segL width=segW
+    R6 (n6 n7) rppolywo length=segL width=segW
+    R5 (n5 n6) rppolywo length=segL width=segW
+    R4 (n4 n5) rppolywo length=segL width=segW
+    R3 (n3 n4) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_11
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: invx1a
+// View name: schematic
+subckt invx1a A VNEG VPOS Y
+    NM8 (Y A VNEG VNEG) nch6 length=0.6u width=1u m=1 multi=1 ad=440f \
+        as=440f pd=1.88u ps=1.88u nf=1 sa=440n sb=440n
+    PM6 (Y A VPOS VPOS VNEG) pch6 length=0.6u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+ends invx1a
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: HOSC_RES
+// View name: schematic
+subckt HOSC_RES AVDD AVSS FREQ\<4\> FREQ\<3\> FREQ\<2\> FREQ\<1\> \
+        FREQ\<0\> VH VL
+    R9 (VL VL) rppolywo_pcell_3 m=1 segL=20u segW=1u
+    R7 (net020 net16) rppolywo_pcell_10 m=1 segL=20u segW=1u
+    R8 (net021 net19) rppolywo_pcell_2 m=1 segL=20u segW=1u
+    R5 (VL net020) rppolywo_pcell_10 m=1 segL=20u segW=1u
+    R4 (net020 net021) rppolywo_pcell_2 m=1 segL=20u segW=1u
+    R3 (net021 net8) rppolywo_pcell_2 m=1 segL=20u segW=1u
+    R2 (net8 net7) rppolywo_pcell_5 m=1 segL=20u segW=1u
+    R1 (net7 VH) rppolywo_pcell_11 m=1 segL=20u segW=1u
+    I24 (net030 AVSS AVDD CF\<3\>) invx1a
+    I23 (CF\<2\> AVSS AVDD net031) invx1a
+    I19 (net019 AVSS AVDD net032) invx1a
+    I10 (FREQ\<4\> AVSS AVDD net019) invx1a
+    I12 (FREQ\<3\> AVSS AVDD net030) invx1a
+    I13 (FREQ\<2\> AVSS AVDD CF\<2\>) invx1a
+    I15 (FREQ\<1\> AVSS AVDD net028) invx1a
+    I21 (net029 AVSS AVDD CF\<0\>) invx1a
+    I17 (FREQ\<0\> AVSS AVDD net029) invx1a
+    I22 (net028 AVSS AVDD CF\<1\>) invx1a
+    NM5 (VH net032 net7 AVSS) nch5 length=0.5u width=20u m=1 multi=1 ad=5p \
+        as=8.8p pd=1u ps=21.76u nf=2 sa=440n sb=440n
+    NM4 (net7 CF\<3\> net8 AVSS) nch5 length=0.5u width=20u m=1 multi=1 \
+        ad=5p as=8.8p pd=1u ps=21.76u nf=2 sa=440n sb=440n
+    NM3 (net8 net031 net021 AVSS) nch5 length=0.5u width=40u m=1 multi=1 \
+        ad=10p as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    NM2 (net19 CF\<1\> net020 AVSS) nch5 length=0.5u width=40u m=1 multi=1 \
+        ad=10p as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    NM1 (net16 CF\<0\> VL AVSS) nch5 length=0.5u width=80u m=1 multi=1 \
+        ad=20p as=23.8p pd=4u ps=24.76u nf=8 sa=440n sb=440n
+ends HOSC_RES
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: buf_hys
+// View name: schematic
+subckt buf_hys A VNEG VPOS Y
+    NM3 (net64 Y VNEG VNEG) nch6 length=0.6u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM2 (Y net06 VNEG VNEG) nch6 length=0.6u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM0 (net64 A VNEG VNEG) nch6 length=1.5u width=1.5u m=1 multi=1 \
+        ad=375f as=660f pd=1u ps=3.26u nf=2 sa=440n sb=440n
+    NM1 (net06 A net64 VNEG) nch6 length=0.6u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM0 (net058 A VPOS VPOS VNEG) pch6 length=1.5u width=3u m=1 multi=1 \
+        ad=1.32p as=1.32p pd=3.88u ps=3.88u nf=1 sa=440n sb=440n
+    PM1 (net06 A net058 VPOS VNEG) pch6 length=4u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM3 (Y net06 VPOS VPOS VNEG) pch6 length=0.6u width=4u m=1 multi=1 \
+        ad=1.76p as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+    PM2 (net058 Y VPOS VPOS VNEG) pch6 length=4u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+ends buf_hys
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: HOSC_RDY
+// View name: schematic
+subckt HOSC_RDY CK1 CK2 ENB IB RDY VNEG VPOS
+    PM5 (VPOS VPOS VPOS VPOS VNEG) pch6 length=0.6u width=1.5u m=4 multi=4 \
+        ad=660f as=660f pd=2.38u ps=2.38u nf=1 sa=440n sb=440n
+    PM2 (net12 net14 VPOS VPOS VNEG) pch6 length=0.6u width=1.5u m=1 \
+        multi=1 ad=660f as=660f pd=2.38u ps=2.38u nf=1 sa=440n sb=440n
+    PM1 (net041 net13 net12 VPOS VNEG) pch6 length=0.6u width=1.5u m=1 \
+        multi=1 ad=660f as=660f pd=2.38u ps=2.38u nf=1 sa=440n sb=440n
+    PM0 (net041 net14 net021 VPOS VNEG) pch6 length=0.6u width=1.5u m=1 \
+        multi=1 ad=660f as=660f pd=2.38u ps=2.38u nf=1 sa=440n sb=440n
+    PM4 (net021 net13 VPOS VPOS VNEG) pch6 length=0.6u width=1.5u m=1 \
+        multi=1 ad=660f as=660f pd=2.38u ps=2.38u nf=1 sa=440n sb=440n
+    NM8 (VNEG VNEG VNEG VNEG) nch6 length=2.5u width=0.7u m=1 multi=1 \
+        ad=308f as=308f pd=1.58u ps=1.58u nf=1 sa=440n sb=440n
+    NM10 (VNEG VNEG VNEG VNEG) nch6 length=2u width=7.5u m=1 multi=1 \
+        ad=3.3p as=3.3p pd=8.38u ps=8.38u nf=1 sa=440n sb=440n
+    NM7 (net041 ENB VNEG VNEG) nch6 length=2.5u width=0.7u m=1 multi=1 \
+        ad=308f as=308f pd=1.58u ps=1.58u nf=1 sa=440n sb=440n
+    NM3 (VNEG net041 VNEG VNEG) nch6 length=7.9u width=33u m=1 multi=1 \
+        ad=14.52p as=14.52p pd=33.88u ps=33.88u nf=1 sa=440n sb=440n
+    NM9 (VNEG net041 VNEG VNEG) nch6 length=2u width=20.5u m=1 multi=1 \
+        ad=9.02p as=9.02p pd=21.38u ps=21.38u nf=1 sa=440n sb=440n
+    NM2 (VNEG net021 VNEG VNEG) nch6 length=2u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM1 (VNEG net12 VNEG VNEG) nch6 length=2u width=5u m=1 multi=1 ad=2.2p \
+        as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM5 (net041 IB net21 VNEG) nch6 length=5u width=2.5u m=1 multi=1 \
+        ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    NM0 (IB IB VNEG VNEG) nch6 length=2.5u width=5u m=1 multi=1 ad=2.2p \
+        as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM15 (net21 IB VNEG VNEG) nch6 length=5u width=2.5u m=1 multi=1 \
+        ad=1.1p as=1.1p pd=3.38u ps=3.38u nf=1 sa=440n sb=440n
+    I5 (net041 VNEG VPOS RDY) buf_hys
+    I6 (CK1 VNEG VPOS net14) invxd1
+    I7 (CK2 VNEG VPOS net13) invxd1
+ends HOSC_RDY
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_12 MINUS PLUS
+parameters segL=100u segW=1u
+    R8 (n8 MINUS) rppolywo length=segL width=segW
+    R7 (n7 n8) rppolywo length=segL width=segW
+    R6 (n6 n7) rppolywo length=segL width=segW
+    R5 (n5 n6) rppolywo length=segL width=segW
+    R4 (n4 n5) rppolywo length=segL width=segW
+    R3 (n3 n4) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_12
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_13 MINUS PLUS
+parameters segL=100u segW=1u
+    R9 (PLUS MINUS) rppolywo length=segL width=segW
+    R8 (PLUS MINUS) rppolywo length=segL width=segW
+    R7 (PLUS MINUS) rppolywo length=segL width=segW
+    R6 (PLUS MINUS) rppolywo length=segL width=segW
+    R5 (PLUS MINUS) rppolywo length=segL width=segW
+    R4 (PLUS MINUS) rppolywo length=segL width=segW
+    R3 (PLUS MINUS) rppolywo length=segL width=segW
+    R2 (PLUS MINUS) rppolywo length=segL width=segW
+    R1 (PLUS MINUS) rppolywo length=segL width=segW
+    R0 (PLUS MINUS) rppolywo length=segL width=segW
+ends rppolywo_pcell_13
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_14 MINUS PLUS
+parameters segL=100u segW=1u
+    R15 (n15 MINUS) rppolywo length=segL width=segW
+    R14 (n14 n15) rppolywo length=segL width=segW
+    R13 (n13 n14) rppolywo length=segL width=segW
+    R12 (n12 n13) rppolywo length=segL width=segW
+    R11 (n11 n12) rppolywo length=segL width=segW
+    R10 (n10 n11) rppolywo length=segL width=segW
+    R9 (n9 n10) rppolywo length=segL width=segW
+    R8 (n8 n9) rppolywo length=segL width=segW
+    R7 (n7 n8) rppolywo length=segL width=segW
+    R6 (n6 n7) rppolywo length=segL width=segW
+    R5 (n5 n6) rppolywo length=segL width=segW
+    R4 (n4 n5) rppolywo length=segL width=segW
+    R3 (n3 n4) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_14
+// End of subcircuit definition.
+
+// Library name: hb180ell
+// Cell name: rppolywo
+// View name: schematic
+subckt rppolywo_pcell_15 MINUS PLUS
+parameters segL=100u segW=1u
+    R31 (n31 MINUS) rppolywo length=segL width=segW
+    R30 (n30 n31) rppolywo length=segL width=segW
+    R29 (n29 n30) rppolywo length=segL width=segW
+    R28 (n28 n29) rppolywo length=segL width=segW
+    R27 (n27 n28) rppolywo length=segL width=segW
+    R26 (n26 n27) rppolywo length=segL width=segW
+    R25 (n25 n26) rppolywo length=segL width=segW
+    R24 (n24 n25) rppolywo length=segL width=segW
+    R23 (n23 n24) rppolywo length=segL width=segW
+    R22 (n22 n23) rppolywo length=segL width=segW
+    R21 (n21 n22) rppolywo length=segL width=segW
+    R20 (n20 n21) rppolywo length=segL width=segW
+    R19 (n19 n20) rppolywo length=segL width=segW
+    R18 (n18 n19) rppolywo length=segL width=segW
+    R17 (n17 n18) rppolywo length=segL width=segW
+    R16 (n16 n17) rppolywo length=segL width=segW
+    R15 (n15 n16) rppolywo length=segL width=segW
+    R14 (n14 n15) rppolywo length=segL width=segW
+    R13 (n13 n14) rppolywo length=segL width=segW
+    R12 (n12 n13) rppolywo length=segL width=segW
+    R11 (n11 n12) rppolywo length=segL width=segW
+    R10 (n10 n11) rppolywo length=segL width=segW
+    R9 (n9 n10) rppolywo length=segL width=segW
+    R8 (n8 n9) rppolywo length=segL width=segW
+    R7 (n7 n8) rppolywo length=segL width=segW
+    R6 (n6 n7) rppolywo length=segL width=segW
+    R5 (n5 n6) rppolywo length=segL width=segW
+    R4 (n4 n5) rppolywo length=segL width=segW
+    R3 (n3 n4) rppolywo length=segL width=segW
+    R2 (n2 n3) rppolywo length=segL width=segW
+    R1 (n1 n2) rppolywo length=segL width=segW
+    R0 (PLUS n1) rppolywo length=segL width=segW
+ends rppolywo_pcell_15
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: invxd0
+// View name: schematic
+subckt invxd0 A VNEG VPOS Y
+    NM8 (Y A VNEG VNEG) nch6 length=2u width=2u m=1 multi=1 ad=880f \
+        as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM6 (Y A VPOS VPOS VNEG) pch6 length=2u width=4u m=1 multi=1 ad=1.76p \
+        as=1.76p pd=4.88u ps=4.88u nf=1 sa=440n sb=440n
+ends invxd0
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: HOSC
+// View name: schematic
+subckt HOSC AVDD AVSS CLK ENB FREQ\<4\> FREQ\<3\> FREQ\<2\> FREQ\<1\> \
+        FREQ\<0\> RDY
+    PM60\<1\> (net302 net301 net0198\<0\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM60\<2\> (net302 net301 net0198\<1\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM60\<3\> (net302 net301 net0198\<2\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM60\<4\> (net302 net301 net0198\<3\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM56\<1\> (net099 net301 net0180\<0\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM56\<2\> (net099 net301 net0180\<1\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM56\<3\> (net099 net301 net0180\<2\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM56\<4\> (net099 net301 net0180\<3\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM66\<1\> (net0188\<0\> net018 AVDD AVDD AVSS) pch6 length=8u width=1u \
+        m=1 multi=1 ad=440f as=440f pd=1.88u ps=1.88u nf=1 sa=440n sb=440n
+    PM66\<2\> (net0188\<1\> net018 AVDD AVDD AVSS) pch6 length=8u width=1u \
+        m=1 multi=1 ad=440f as=440f pd=1.88u ps=1.88u nf=1 sa=440n sb=440n
+    PM66\<3\> (net0188\<2\> net018 AVDD AVDD AVSS) pch6 length=8u width=1u \
+        m=1 multi=1 ad=440f as=440f pd=1.88u ps=1.88u nf=1 sa=440n sb=440n
+    PM66\<4\> (net0188\<3\> net018 AVDD AVDD AVSS) pch6 length=8u width=1u \
+        m=1 multi=1 ad=440f as=440f pd=1.88u ps=1.88u nf=1 sa=440n sb=440n
+    PM54\<1\> (net0171 net301 net0179\<0\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM54\<2\> (net0171 net301 net0179\<1\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM54\<3\> (net0171 net301 net0179\<2\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM54\<4\> (net0171 net301 net0179\<3\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM68 (net051 net051 net0118 AVDD AVSS) pch6 length=2.5u width=10u m=1 \
+        multi=1 ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM67 (AVDD AVDD AVDD AVDD AVSS) pch6 length=0.6u width=40u m=1 multi=1 \
+        ad=10p as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    PM64\<1\> (net018 net301 net0162\<0\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM64\<2\> (net018 net301 net0162\<1\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM64\<3\> (net018 net301 net0162\<2\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM64\<4\> (net018 net301 net0162\<3\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM62\<1\> (net0197\<0\> net301 net0193\<0\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM62\<2\> (net0197\<1\> net301 net0193\<1\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM62\<3\> (net0197\<2\> net301 net0193\<2\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM62\<4\> (net0197\<3\> net301 net0193\<3\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM61\<1\> (net0193\<0\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM61\<2\> (net0193\<1\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM61\<3\> (net0193\<2\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM61\<4\> (net0193\<3\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM39 (net0185 net018 AVDD AVDD AVSS) pch6 length=8u width=2u m=1 \
+        multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM5\<1\> (net0178\<0\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM5\<2\> (net0178\<1\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM5\<3\> (net0178\<2\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM5\<4\> (net0178\<3\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM36 (net0202 net018 AVDD AVDD AVSS) pch6 length=8u width=2u m=1 \
+        multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM50 (net035 net301 net0185 AVDD AVSS) pch6 length=1u width=2u m=1 \
+        multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM63\<1\> (net0162\<0\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM63\<2\> (net0162\<1\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM63\<3\> (net0162\<2\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM63\<4\> (net0162\<3\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM59\<1\> (net079 net301 net0165\<0\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM59\<2\> (net079 net301 net0165\<1\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM59\<3\> (net079 net301 net0165\<2\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM59\<4\> (net079 net301 net0165\<3\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM65\<1\> (net0207\<0\> net301 net0188\<0\> AVDD AVSS) pch6 length=1u \
+        width=1u m=1 multi=1 ad=440f as=440f pd=1.88u ps=1.88u nf=1 \
+        sa=440n sb=440n
+    PM65\<2\> (net0207\<1\> net301 net0188\<1\> AVDD AVSS) pch6 length=1u \
+        width=1u m=1 multi=1 ad=440f as=440f pd=1.88u ps=1.88u nf=1 \
+        sa=440n sb=440n
+    PM65\<3\> (net0207\<2\> net301 net0188\<2\> AVDD AVSS) pch6 length=1u \
+        width=1u m=1 multi=1 ad=440f as=440f pd=1.88u ps=1.88u nf=1 \
+        sa=440n sb=440n
+    PM65\<4\> (net0207\<3\> net301 net0188\<3\> AVDD AVSS) pch6 length=1u \
+        width=1u m=1 multi=1 ad=440f as=440f pd=1.88u ps=1.88u nf=1 \
+        sa=440n sb=440n
+    PM58\<1\> (net0198\<0\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM58\<2\> (net0198\<1\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM58\<3\> (net0198\<2\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM58\<4\> (net0198\<3\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM30 (net301 ENH AVDD AVDD AVSS) pch6 length=0.6u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    PM55\<1\> (net0180\<0\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM55\<2\> (net0180\<1\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM55\<3\> (net0180\<2\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM55\<4\> (net0180\<3\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM24 (net051 ENH AVDD AVDD AVSS) pch6 length=0.6u width=10u m=1 \
+        multi=1 ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM23 (net018 ENH AVDD AVDD AVSS) pch6 length=0.6u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    PM22 (net081 ENL net077 AVDD AVSS) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM21 (net077 ENL net076 AVDD AVSS) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM20 (net0103 ENL net078 AVDD AVSS) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM19 (net076 ENL net0103 AVDD AVSS) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM18 (net078 ENL AVDD AVDD AVSS) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM29 (VCO_CLK net072 AVDD AVDD AVSS) pch6 length=0.6u width=8u m=1 \
+        multi=1 ad=2p as=3.52p pd=1u ps=9.76u nf=2 sa=440n sb=440n
+    PM28 (net075 ENL net081 AVDD AVSS) pch6 length=10u width=0.6u m=1 \
+        multi=1 ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    PM13\<1\> (net017 net301 net0178\<0\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM13\<2\> (net017 net301 net0178\<1\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM13\<3\> (net017 net301 net0178\<2\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM13\<4\> (net017 net301 net0178\<3\> AVDD AVSS) pch6 length=1u \
+        width=2u m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 \
+        sa=440n sb=440n
+    PM35 (net0201 net301 net0202 AVDD AVSS) pch6 length=1u width=2u m=1 \
+        multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM53\<1\> (net0179\<0\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM53\<2\> (net0179\<1\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM53\<3\> (net0179\<2\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM53\<4\> (net0179\<3\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM57\<1\> (net0165\<0\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM57\<2\> (net0165\<1\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM57\<3\> (net0165\<2\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM57\<4\> (net0165\<3\> net018 AVDD AVDD AVSS) pch6 length=8u width=2u \
+        m=1 multi=1 ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    PM10 (net072 VCO_CLK net307 AVDD AVSS) pch6 length=0.6u width=40u m=1 \
+        multi=1 ad=10p as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    PM9 (net307 net051 AVDD AVDD AVSS) pch6 length=2.5u width=40u m=1 \
+        multi=1 ad=10p as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    PM6 (net0118 net051 AVDD AVDD AVSS) pch6 length=2.5u width=10u m=1 \
+        multi=1 ad=4.4p as=4.4p pd=10.88u ps=10.88u nf=1 sa=440n sb=440n
+    PM3 (net072 net051 AVDD AVDD AVSS) pch6 length=2.5u width=80u m=1 \
+        multi=1 ad=20p as=23.8p pd=4u ps=24.76u nf=8 sa=440n sb=440n
+    PM2 (net283 net051 AVDD AVDD AVSS) pch6 length=2.5u width=40u m=1 \
+        multi=1 ad=10p as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    PM1 (net060 net051 AVDD AVDD AVSS) pch6 length=2.5u width=40u m=1 \
+        multi=1 ad=10p as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    PM0 (net269 net051 AVDD AVDD AVSS) pch6 length=2.5u width=40u m=1 \
+        multi=1 ad=10p as=13.8p pd=2u ps=22.76u nf=4 sa=440n sb=440n
+    NM84 (net0171 net0171 net0190 AVSS) nch6 length=2u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM83 (AVSS AVSS AVSS AVSS) nch6 length=5u width=5u m=1 multi=1 ad=2.2p \
+        as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM66\<1\> (net0115 net0201 net0168\<0\> AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM66\<2\> (net0115 net0201 net0168\<1\> AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM66\<3\> (net0115 net0201 net0168\<2\> AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM66\<4\> (net0115 net0201 net0168\<3\> AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM66\<5\> (net0115 net0201 net0168\<4\> AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM66\<6\> (net0115 net0201 net0168\<5\> AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM66\<7\> (net0115 net0201 net0168\<6\> AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM66\<8\> (net0115 net0201 net0168\<7\> AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM46 (net0201 net079 net0120 AVSS) nch6 length=3u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM45 (net0120 net017 net0115 AVSS) nch6 length=1.5u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM5\<1\> (net0199\<0\> net017 net0177 AVSS) nch6 length=1.5u width=5u \
+        m=1 multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM5\<2\> (net0199\<1\> net017 net0177 AVSS) nch6 length=1.5u width=5u \
+        m=1 multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM5\<3\> (net0199\<2\> net017 net0177 AVSS) nch6 length=1.5u width=5u \
+        m=1 multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM5\<4\> (net0199\<3\> net017 net0177 AVSS) nch6 length=1.5u width=5u \
+        m=1 multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM87 (AVSS AVSS AVSS AVSS) nch6 length=0.6u width=3u m=4 multi=4 \
+        ad=1.32p as=1.32p pd=3.88u ps=3.88u nf=1 sa=440n sb=440n
+    NM54\<1\> (net0168\<0\> net0201 AVSS AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM54\<2\> (net0168\<1\> net0201 AVSS AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM54\<3\> (net0168\<2\> net0201 AVSS AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM54\<4\> (net0168\<3\> net0201 AVSS AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM54\<5\> (net0168\<4\> net0201 AVSS AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM54\<6\> (net0168\<5\> net0201 AVSS AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM54\<7\> (net0168\<6\> net0201 AVSS AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM54\<8\> (net0168\<7\> net0201 AVSS AVSS) nch6 length=10u \
+        width=1.185u m=1 multi=1 ad=521.4f as=521.4f pd=2.065u ps=2.065u \
+        nf=1 sa=440n sb=440n
+    NM38 (net0171 net0171 net0171 AVSS) nch6 length=2u width=5u m=2 \
+        multi=2 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM37 (net051 ENH net267 AVSS) nch6 length=0.6u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM26 (net302 ENL AVSS AVSS) nch6 length=0.6u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM25 (net0190 net0190 AVSS AVSS) nch6 length=2u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM24 (AVSS AVSS AVSS AVSS) nch6 length=1u width=5u m=1 multi=1 ad=2.2p \
+        as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM22 (net0171 ENL AVSS AVSS) nch6 length=0.6u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM21 (net072 ENL AVSS AVSS) nch6 length=0.6u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM20 (net075 net302 AVSS AVSS) nch6 length=5u width=1u m=1 multi=1 \
+        ad=440f as=440f pd=1.88u ps=1.88u nf=1 sa=440n sb=440n
+    NM17 (net084 net079 AVSS AVSS) nch6 length=10u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM16 (net079 net079 net084 AVSS) nch6 length=10u width=2u m=1 multi=1 \
+        ad=880f as=880f pd=2.88u ps=2.88u nf=1 sa=440n sb=440n
+    NM8\<1\> (net0171 net079 net0182\<0\> AVSS) nch6 length=3u width=5u \
+        m=1 multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM8\<2\> (net0171 net079 net0182\<1\> AVSS) nch6 length=3u width=5u \
+        m=1 multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM8\<3\> (net0171 net079 net0182\<2\> AVSS) nch6 length=3u width=5u \
+        m=1 multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM8\<4\> (net0171 net079 net0182\<3\> AVSS) nch6 length=3u width=5u \
+        m=1 multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM4\<1\> (net0182\<0\> net017 VFB AVSS) nch6 length=1.5u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM4\<2\> (net0182\<1\> net017 VFB AVSS) nch6 length=1.5u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM4\<3\> (net0182\<2\> net017 VFB AVSS) nch6 length=1.5u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM4\<4\> (net0182\<3\> net017 VFB AVSS) nch6 length=1.5u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM9\<1\> (net017 net079 net0199\<0\> AVSS) nch6 length=3u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM9\<2\> (net017 net079 net0199\<1\> AVSS) nch6 length=3u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM9\<3\> (net017 net079 net0199\<2\> AVSS) nch6 length=3u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM9\<4\> (net017 net079 net0199\<3\> AVSS) nch6 length=3u width=5u m=1 \
+        multi=1 ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM3 (net301 net302 net296 AVSS) nch6 length=1u width=5u m=2 multi=2 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM15 (net302 net296 AVSS AVSS) nch6 length=5u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM14 (VFB SW2 net309 AVSS) nch6 length=0.6u width=3u m=1 multi=1 \
+        ad=750f as=1.32p pd=1u ps=4.76u nf=2 sa=440n sb=440n
+    NM13 (net309 SW1 AVSS AVSS) nch6 length=0.6u width=3u m=1 multi=1 \
+        ad=750f as=1.32p pd=1u ps=4.76u nf=2 sa=440n sb=440n
+    NM12 (VFB SW1 net308 AVSS) nch6 length=0.6u width=3u m=1 multi=1 \
+        ad=750f as=1.32p pd=1u ps=4.76u nf=2 sa=440n sb=440n
+    NM11 (net308 SW2 AVSS AVSS) nch6 length=0.6u width=3u m=1 multi=1 \
+        ad=750f as=1.32p pd=1u ps=4.76u nf=2 sa=440n sb=440n
+    NM36 (net269 AVSS AVSS AVSS) nch6 length=2u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM19 (net065 net075 AVSS AVSS) nch6 length=0.6u width=1u m=1 multi=1 \
+        ad=440f as=440f pd=1.88u ps=1.88u nf=1 sa=440n sb=440n
+    NM18 (net301 ENH net065 AVSS) nch6 length=0.6u width=1u m=1 multi=1 \
+        ad=440f as=440f pd=1.88u ps=1.88u nf=1 sa=440n sb=440n
+    NM7 (net267 net0171 net0191 AVSS) nch6 length=2u width=5u m=2 multi=2 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM29 (AVSS net283 AVSS AVSS) nch6 length=5u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM35 (net060 ENL AVSS AVSS) nch6 length=2u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM6 (net072 net283 AVSS AVSS) nch6 length=0.6u width=8u m=1 multi=1 \
+        ad=2p as=2.76p pd=2u ps=6.76u nf=4 sa=440n sb=440n
+    NM31 (VCO_CLK net072 AVSS AVSS) nch6 length=0.6u width=16u m=1 multi=1 \
+        ad=4p as=4.76p pd=4u ps=8.76u nf=8 sa=440n sb=440n
+    NM28 (AVSS net060 AVSS AVSS) nch6 length=5u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM27 (AVSS net269 AVSS AVSS) nch6 length=5u width=5u m=1 multi=1 \
+        ad=2.2p as=2.2p pd=5.88u ps=5.88u nf=1 sa=440n sb=440n
+    NM34 (net283 AVSS AVSS AVSS) nch6 length=2u width=0.6u m=1 multi=1 \
+        ad=264f as=264f pd=1.48u ps=1.48u nf=1 sa=440n sb=440n
+    NM2 (net283 net060 AVSS AVSS) nch6 length=1u width=4u m=1 multi=1 \
+        ad=1p as=1.76p pd=1u ps=5.76u nf=2 sa=440n sb=440n
+    NM1 (net060 net269 AVSS AVSS) nch6 length=1u width=4u m=1 multi=1 \
+        ad=1p as=1.76p pd=1u ps=5.76u nf=2 sa=440n sb=440n
+    NM0 (net269 net283 AVSS AVSS) nch6 length=1u width=4u m=1 multi=1 \
+        ad=1p as=1.76p pd=1u ps=5.76u nf=2 sa=440n sb=440n
+    I27 (net0163 AVSS AVDD CLK) invxd2
+    C9 (VFB AVSS AVSS) nmoscap5 length=23.5u width=12.8u c=802.656f m=6 \
+        multi=6
+    C8 (AVDD AVSS AVSS) nmoscap5 length=30u width=10u c=801.144f m=3 \
+        multi=3
+    C5 (net309 AVSS AVSS) nmoscap5 length=10u width=10u c=268.14f m=2 \
+        multi=2
+    C4 (net308 AVSS AVSS) nmoscap5 length=10u width=10u c=268.14f m=2 \
+        multi=2
+    C10 (net0171 AVSS AVSS) nmoscap5 length=15u width=23.5u c=939.951f m=6 \
+        multi=6
+    C3 (net0177 AVSS AVSS) nmoscap5 length=13.5u width=22.3u c=803.237f \
+        m=1 multi=1
+    I30 (net0157 net275 net290 net275 ENH AVSS AVDD) dffrn
+    I28 (VCO_CLK net0163 net0159 net0163 ENH AVSS AVDD) dffrn
+    I29 (net0159 net080 net0157 net080 ENH AVSS AVDD) dffrn
+    I17 (AVDD AVSS FREQ\<4\> FREQ\<3\> FREQ\<2\> FREQ\<1\> FREQ\<0\> \
+        net0101 AVSS) HOSC_RES
+    I18 (SW1 SW2 ENL net099 RDY AVSS AVDD) HOSC_RDY
+    I19 (net087 net278 net275 AVDD AVSS) nand2d2
+    I22 (net088 net279 net290 AVDD AVSS) nand2d2
+    R15 (AVSS AVSS) rppolywo_pcell_3 m=1 segL=20u segW=0.5u
+    R11 (AVSS net0191) rppolywo_pcell_12 m=1 segL=20u segW=1u
+    R1 (net0101 net0206) rppolywo_pcell_12 m=1 segL=20u segW=1u
+    R13 (net0191 net0204) rppolywo_pcell_5 m=1 segL=20u segW=1u
+    R8 (net0177 net0177) rppolywo_pcell_13 m=1 segL=20u segW=1u
+    R0 (net301 net018) rppolywo_pcell_14 m=1 segL=20u segW=0.5u
+    R4 (AVSS net296) rppolywo_pcell_15 m=1 segL=20u segW=0.5u
+    R9 (net0206 net0177) rppolywo_pcell_3 m=1 segL=20u segW=1u
+    I23 (net088 AVSS AVDD net086) invxd0
+    I20 (net087 AVSS AVDD net085) invxd0
+    I21 (net085 AVSS AVDD net279) invxd1
+    I31 (ENB AVSS AVDD ENH) invxd1
+    I26 (net278 AVSS AVDD SW1) invxd1
+    I25 (net279 AVSS AVDD SW2) invxd1
+    I24 (net086 AVSS AVDD net278) invxd1
+    I32 (ENH AVSS AVDD ENL) invxd1
+ends HOSC
+// End of subcircuit definition.
+
+// Library name: D05200_SCH_Guo
+// Cell name: ANALOG_TOP
+// View name: schematic
+subckt ANALOG_TOP AGND AVDD HCFR\<7\> HCFR\<6\> HCFR\<5\> HCFR\<4\> \
+        HCFR\<3\> HCLK HENB HRDY LCFR\<7\> LCFR\<6\> LCFR\<5\> LCFR\<4\> \
+        LCLK OUT OWLI OWLO OWL_IE OWL_NOE OWL_PD OWL_POE OWL_PU RESET \
+        RESET_EN SMOKE_CLK SW TSO TS_IE TS_NOE TS_OUT TS_PD TS_POE TS_PU \
+        VPP
+    I9 (AGND vdd!) DIG_CAP
+    R0 (vdd! AVDD) rppolywo_pcell_34 m=1 segL=2.4u segW=10u
+    I7 (AGND net49 TS_OUT TS_IE TS_NOE TSO TS_PD TS_POE TS_PU AVDD VDDIN1) \
+        TS_PAD
+    I4 (AGND AVDD SW SW_IN VPP) ESDCELL_V0
+    I13 (AGND AVDD) VDD_GND_CAP
+    I1 (AGND IB_CLK IB_SW IB_OSC1 IB_OSC2 LCLK RESET SMOKE_CLK SW_IN \
+        VDDIN1 AGND VDDIN1 VREF_OSC net48) OSC
+    I5 (AGND OWLI OWLO OWL_IE OWL_NOE OUT OWL_PD OWL_POE OWL_PU AVDD \
+        VDDIN1) DRVBLK
+    I3 (AGND BIAS_OK RESET RESET_EN VDDIN1) RESET
+    I0 (AGND BIAS_OK LCFR\<4\> LCFR\<5\> LCFR\<6\> LCFR\<7\> IB_CLK net46 \
+        IB_OSC1 IB_OSC2 IB_OTP IB_SW AGND VDDIN1 net47 VDDIN1 VREF_OSC) \
+        BIAS
+    I12 (AGND VDDIN1) Other_CAP
+    Rosc (VDDIN1 AVDD) rppolywi_pcell_42 m=1 segL=20u segW=5u
+    I_OSC (HCLK HRDY VDDIN1 AGND HENB HCFR\<7\> HCFR\<6\> HCFR\<5\> \
+        HCFR\<4\> HCFR\<3\>) HOSC_BLANK
+ends ANALOG_TOP
+// End of subcircuit definition.
+
